@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Citroen 100 años</title>
+    <meta name="description" content="">
+    <link rel="icon" href="img/favicon.png">
+
+
+    <link rel="icon" href="img/favicon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="css/estilos.css" />
+
+    <script>
+  
+
+    </script>
+</head>
+
+<body id="" >
+
+
+
+    <!-- CARGADOR -->
+   <!--  <div id="overlayer" class="lds-loader">
+        <div class="lds-container">
+            <img src="img/logos/logo-2016.svg">
+            <div class="lds-ellipsis">
+                <div>
+                    <div></div>
+                </div>
+                <div>
+                    <div></div>
+                </div>
+                <div>
+                    <div></div>
+                </div>
+                <div>
+                    <div></div>
+                </div>
+                <div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!--  -->
+
+
+   
+
+
+    <header>
+        <div class="center">
+            
+            <a class="roberto" href="home">ROBERTO SANCHEZ</a>
+        </div>
+        <div class="inHead">
+
+            <a class="sobremi"  href="home">
+                SOBRE MI
+            </a>
+
+
+            <a class="proyecto" href="home" >
+                PROYECTOS
+            </a>
+<!-- 
+            <a class="contacto" href="home" >
+                CONTACTO
+            </a> -->
+        </div>
+    </header>
+
+
+
+    <section class="" data-namespace="historia">
+
+
+
+     
+        <div id="timeline"> 
+
+            <div  id="bigtext" class="big-text"> 
+       
+
+                <img class="sandro" src="img/Sandro_retrato.jpg">
+                <ul id="scene">
+                    <li class="layer" data-depth="0.6" data-invert-y="false" data-limit-y="false">
+                        <p class="layer1">WEB <span>DEVELOPER</span></p>
+                    </li>
+
+                    <li class="layer" data-depth="0.3" data-invert-y="true" >
+                        <p class="layer2"><span>WEB </span>DEVELOPER <span>WEB </span></p>
+                    </li>
+
+                    <li class="layer" data-depth="0.6" data-invert-y="false" data-limit-y="false">
+                        <p class="layer3"><span>WEB DEVELOPER</span></p>
+                    </li>
+
+                    <li class="layer" data-depth="0.3" data-invert-y="true" >
+                        <p class="layer4"><span>WEB DEVELOPER WEB </span></p>
+                    </li>
+                 
+                </ul>
+       
+              
+                
+
+            </div>
+            
+
+        </div>
+
+   
+    </section>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+        <script>
+
+            /**
+             * detect IE
+             * returns version of IE or false, if browser is not Internet Explorer
+             */
+            function detectIE() {
+                var ua = window.navigator.userAgent;
+
+
+                var msie = ua.indexOf('MSIE ');
+                if (msie > 0) {
+                    // IE 10 or older => return version number
+                    return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+                }
+
+                var trident = ua.indexOf('Trident/');
+                if (trident > 0) {
+                    // IE 11 => return version number
+                    var rv = ua.indexOf('rv:');
+                    return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+                }
+
+                var edge = ua.indexOf('Edge/');
+                if (edge > 0) {
+                    // Edge (IE 12+) => return version number
+                    return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+                }
+
+                // other browser
+                return false;
+            }
+
+            const ie = detectIE();
+            if (ie != false) {
+                $('#alertIE').css({ 'display': 'block' });
+
+                $('#overlayer').css({ 'display': 'none' });
+            }
+
+        </script>
+
+    <script type="text/javascript" src="js/jquery.lazyload.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/aos.js"></script>
+
+
+    <script type="text/javascript" src="js/tweenMax.min.js"></script>
+
+    <!-- Scroll Magic -->
+    <script src="js/draggable.min.js"></script>
+
+    <script src="js/scrollMagic.min.js"></script>
+
+    <script type="text/javascript" src="js/debug.addIndicators.min.js"></script>
+    <script type="text/javascript" src="js/animation.gsap.js"></script>
+    <script type="text/javascript" src="js/jquery.sharrre.js"></script>
+
+    <script type="text/javascript" src="js/EasePack.min.js"></script>
+
+    <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+<!-- Barba -->
+    <script type="text/javascript" src="js/barba.min.js"></script>
+
+    <!-- <script src="js/swiper.min.js"></script> -->
+    <!-- <script src="js/swiper.min.js"></script> -->
+    <script src="js/frontend.js"></script>
+    <!-- <script type="text/javascript" src="js/barbaController.js"></script> -->
+        <!-- <script    src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script> -->
+
+        <script>
+            startScrollMagic();
+
+        </script>
+
+    </section>
+    <!-- BARBA CONTAINER -->
+
+
+
+</body>
+
+</html>

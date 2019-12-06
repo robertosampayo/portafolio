@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Citroen 100 años</title>
+    <meta name="description" content="">
+    <link rel="icon" href="img/favicon.png">
+
+
+    <link rel="icon" href="img/favicon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="css/estilos.css" />
+
+    <script>
+  
+
+    </script>
+</head>
+
+<body id="barba-wrapper" >
+
+
+
+    <!-- CARGADOR -->
+   <!--  <div id="overlayer" class="lds-loader">
+        <div class="lds-container">
+            <img src="img/logos/logo-2016.svg">
+            <div class="lds-ellipsis">
+                <div>
+                    <div></div>
+                </div>
+                <div>
+                    <div></div>
+                </div>
+                <div>
+                    <div></div>
+                </div>
+                <div>
+                    <div></div>
+                </div>
+                <div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!--  -->
+
+
+   
+
+
+    <header>
+        <div class="center">
+            
+            <a class="roberto" href="index.html">ROBERTO SANCHEZ</a>
+        </div>
+        <div class="inHead">
+
+            <a class="sobremi"  href="about.html">
+                ABOUT
+            </a>
+
+
+            <a class="proyecto" href="work.html" >
+                WORK
+            </a>
+<!-- 
+            <a class="contacto" href="home" >
+                CONTACTO
+            </a> -->
+        </div>
+    </header>
+
+
+
+    <section class="barba-container" data-namespace="home">
+
+
+
+     
+        <div id="home"> 
+
+            <div  id="bigtext" class="big-text"> 
+       
+                <div class="imagenes">
+                    <!-- <img class="sandro" src="img/Sandro_retrato.jpg"> -->
+                    
+                </div>
+                
+                
+                <ul id="scene2">
+
+
+                    <li class="layer panel1 " data-depth="0.1">
+                        <div class='marquee1' data-duration='5000' data-gap='10' data-duplicated='true' >
+                            <p class=" texto1"> <span>I AM DEVELOPER.</span> </p>
+                        </div>
+                    </li>
+
+                    <li class="layer panel2" data-depth="0.6">
+                        <p id="layer2" class="layer2 texto2">WEB DEVELOPER</p>
+                    </li>
+
+                    <li class="layer panel3" data-depth="0.3 ">
+                       <p class="layer3 texto3"> <span>WEB DEVELOPER</span> </p> 
+                    </li>
+
+                    <li class="layer panel4" data-depth="0.1    ">
+                        <div class='marquee' data-duration='5000' data-gap='10' data-duplicated='true' >
+                            <p class="texto4"><span>DON SATUR´s LOVER.</span></p>
+                        </div>
+
+                       <!-- <p class="layer4 texto4"> <span>DEVELOPER</span> </p> <p class="layer4 texto4"> <span>DEVELOPER</span> </p>  -->
+                    </li>               
+                 
+                </ul>
+       
+              
+                
+
+            </div>
+            
+
+        </div>
+
+   
+    </section>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+        <script>
+
+            /**
+             * detect IE
+             * returns version of IE or false, if browser is not Internet Explorer
+             */
+            function detectIE() {
+                var ua = window.navigator.userAgent;
+
+
+                var msie = ua.indexOf('MSIE ');
+                if (msie > 0) {
+                    // IE 10 or older => return version number
+                    return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+                }
+
+                var trident = ua.indexOf('Trident/');
+                if (trident > 0) {
+                    // IE 11 => return version number
+                    var rv = ua.indexOf('rv:');
+                    return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+                }
+
+                var edge = ua.indexOf('Edge/');
+                if (edge > 0) {
+                    // Edge (IE 12+) => return version number
+                    return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+                }
+
+                // other browser
+                return false;
+            }
+
+            const ie = detectIE();
+            if (ie != false) {
+                $('#alertIE').css({ 'display': 'block' });
+
+                $('#overlayer').css({ 'display': 'none' });
+            }
+
+        </script>
+
+    <script type="text/javascript" src="js/jquery.lazyload.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/aos.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js"></script>
+
+    <script type="text/javascript" src="js/tweenMax.min.js"></script>
+    <script src="js/jquery.marquee.min.js"></script>
+
+    <script src="js/hover-effect.umd.js"></script>
+
+
+
+    <!-- Scroll Magic -->
+    <script src="js/draggable.min.js"></script>
+
+    <script src="js/scrollMagic.min.js"></script>
+
+    <script type="text/javascript" src="js/debug.addIndicators.min.js"></script>
+    <script type="text/javascript" src="js/animation.gsap.js"></script>
+    <script type="text/javascript" src="js/jquery.sharrre.js"></script>
+
+    <script type="text/javascript" src="js/EasePack.min.js"></script>
+
+    <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+<!-- Barba -->
+    <script type="text/javascript" src="js/barba.min.js"></script>
+
+    <!-- <script src="js/swiper.min.js"></script> -->
+    <!-- <script src="js/swiper.min.js"></script> -->
+    <script src="js/frontend.js"></script>
+    <script type="text/javascript" src="js/barbaController.js"></script>
+        <!-- <script    src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script> -->
+
+   
+
+    </section>
+    <!-- BARBA CONTAINER -->
+
+
+
+</body>
+
+</html>
