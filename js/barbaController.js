@@ -46,7 +46,6 @@ document.addEventListener("DOMContentLoaded", function() {
                * At this stage newContainer is on the DOM (inside our #barba-container and with visibility: hidden)
                * Please note, newContainer is available just after newContainerLoading is resolved!
                */
-               console.log("hola!");
               var _this = this;
               var $el = $(this.newContainer);
 
@@ -94,11 +93,14 @@ document.addEventListener("DOMContentLoaded", function() {
               animateAbout();
               activeParallax();
               hoverHead();
-
+              $('.sobremi').css({'pointer-events':"none"});
+              $('body').css({'overflowY':'hidden'});
+              $('.imagenes-home').css({'pointer-events':'none'});
+              $('.imagenes>img').css({'opacity':0});
             },
             onEnterCompleted: function() {
             
-
+              hoverHoyVideo();
 
             },
             onLeave: function() {
@@ -107,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function() {
             },
             onLeaveCompleted: function() {
                 // The Container has just been removed from the DOM.
-
+                $('.sobremi').css({'pointer-events':"all"});
             }
           });
 
@@ -116,24 +118,37 @@ document.addEventListener("DOMContentLoaded", function() {
             namespace: 'home',
             onEnter: function() {
 
+                
+
+
                 animateIndex();
+                startMarquee();
+                generatePhrases();
+
                 activeParallax();
                 hoverBigText();
+                
                 hoverHead();
 
+                $('.roberto').css({'pointer-events':"none"});
+                $('.imagenes>img').css({'opacity':0});
+                startHoverEffect();
+                $('body').css({'overflowY':'hidden'});
+                $('.imagenes-home').css({'pointer-events':'all', 'zIndex': 9999});
             },
             onEnterCompleted: function() {
             
-
+                
+                
 
             },
             onLeave: function() {
-           
+                $('.imagenes-home').css({'zIndex':0, 'pointer-events':'none'});
 
             },
             onLeaveCompleted: function() {
                 // The Container has just been removed from the DOM.
-
+                $('.roberto').css({'pointer-events':"all"});
             }
           });
 
@@ -145,7 +160,12 @@ document.addEventListener("DOMContentLoaded", function() {
               activeParallax();
               hoverWork();
               hoverHead();
-
+              $('.proyecto').css({'pointer-events':"none"});
+              $('.imagenes').css({'opacity':1});
+              $('.imagenes>img').css({'opacity':0});
+               $('body').css({'overflowY':'hidden'});
+               $('.imagenes-home').css({'pointer-events':'none'});
+              
             },
             onEnterCompleted: function() {
             
@@ -154,15 +174,56 @@ document.addEventListener("DOMContentLoaded", function() {
             },
             onLeave: function() {
            
-
+              $('.imagenes-home').css({'zIndex':9999})
             },
             onLeaveCompleted: function() {
                 // The Container has just been removed from the DOM.
-
+                $('.proyecto').css({'pointer-events':"all"});
             }
           });
 
   
+          var Detalle = Barba.BaseView.extend({
+            namespace: 'detalle',
+            onEnter: function() {
+                animateIndex();
+                activeParallax();
+                hoverBigText();
+                hoverHead();
+                startMarquee();
+
+                generatePhrases();
+
+
+                $('.imagenes-home').css({'pointer-events':'none'});
+                
+                $('.detalle').css({'pointer-events':"none"});
+                
+                
+                $('.imagenes').css({'opacity':1});
+            },
+            onEnterCompleted: function() {
+              
+       
+
+                
+
+            },
+            onLeave: function() {
+             
+
+            },
+            onLeaveCompleted: function() {
+                // The Container has just been removed from the DOM.
+                $('.detalle').css({'pointer-events':"all"});
+                $('.imagenes>img').css({'opacity':0});
+
+
+
+            }
+          });
+
+
 
 
           Barba.Pjax.init();

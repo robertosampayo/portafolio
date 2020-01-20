@@ -136,7 +136,7 @@ if ($(window).width() <= 1025 || $(window).width() >= 1366) {
         texto1 = $(".work1");
 
         
-        TweenLite.set(texto1, { x: "-100%" });
+        TweenLite.set(texto1, { x: "-130%" });
 
 
         TweenLite.to(texto1, 5.3, {
@@ -163,14 +163,7 @@ if ($(window).width() <= 1025 || $(window).width() >= 1366) {
             x: "0%", y:"260%",ease: Power4.easeInOut
         });
 
-        // texto4 = $(".work4");
-        
-        // TweenLite.set(texto4, { x: "130%" });
 
-
-        // TweenLite.to(texto4, 5, {
-        //     x: "0%", ease: Power4.easeInOut
-        // });
 
 
     }
@@ -237,8 +230,8 @@ if ($(window).width() <= 1025 || $(window).width() >= 1366) {
 
         if (page === detalle && page != "" ) {
             
-            var scene = document.getElementById('scene3');
-            var parallaxInstance = new Parallax(scene,{relativeInput: true});
+            // var scene = document.getElementById('scene3');
+            // var parallaxInstance = new Parallax(scene,{relativeInput: true});
         } 
 
 
@@ -285,23 +278,47 @@ if ($(window).width() <= 1025 || $(window).width() >= 1366) {
 
         texto1 = $("#work .panel1>a>p");
 
-        texto1.hover(function(){
-            $(".byma").animate({'opacity':1},"slow");
-            $(".work1").animate({'opacity':"1"});
 
-            $(".work2").css({'opacity':"0"});
-            $(".work3").css({'opacity':"0"});
+        texto1.hover(function(){
+            $(".byma").animate({'opacity':1},200);
+            $(".citroen").animate({'opacity':0},200);
+            $(".origins").animate({'opacity':0},200);
+
+            TweenMax.to($(".work1"), 1, { css: { "letter-spacing":'5px'}, ease:Expo.easeOut });
+
+            TweenMax.to($(".work2"), 0.4, { css: { "letter-spacing":'0px'}, ease:Expo.easeOut});
+            TweenMax.to($(".work3"), 0.4, { css: { "letter-spacing":'0px'}, ease:Expo.easeOut });
+
+
 
         
+            
 
-        },function(){
-
-            $(".byma").animate({'opacity':0},"slow");
-            $(".work1").css({'opacity':"1"});
-
-            $(".work2").css({'opacity':"1"});
-            $(".work3").css({'opacity':"1"});
         });
+
+        var flag = true;
+
+        // texto1.click(function(){
+        //     $(".byma").animate({'pointer-events':'none','opacity':1},200);
+        //     $('body').css({'overflowY':'auto'});
+        //     flag = false;
+        // });
+
+        texto1.mouseleave(function () {
+                if (flag) {
+
+                    $(".byma").animate({'opacity':0},200);
+                    
+                }
+
+                TweenMax.to($(".work1"), 1, { css: { "letter-spacing":'0px'}, ease:Expo.easeOut });
+
+                TweenMax.to($(".work2"), 0.4, { css: { "letter-spacing":'0px'}, ease:Expo.easeOut });
+                TweenMax.to($(".work3"), 0.4, { css: { "letter-spacing":'0px'}, ease:Expo.easeOut });
+           
+        });
+
+  
 
 
 
@@ -309,37 +326,71 @@ if ($(window).width() <= 1025 || $(window).width() >= 1366) {
         texto2 = $("#work .panel2>a>p");
 
         texto2.hover(function(){
-            $(".citroen").animate({'opacity':1},"slow");
-            $(".work2").css({'opacity':"1"});
+            $(".byma").animate({'opacity':0},200);
+            $(".citroen").animate({'opacity':1},200);
+            $(".origins").animate({'opacity':0},200);
 
-            $(".work1").css({'opacity':"0"});
-            $(".work3").css({'opacity':"0"});
-        },function(){
 
-            $(".citroen").animate({'opacity':0},"slow");
-            $(".work2").css({'opacity':"1"});
+            TweenMax.to($(".work2"), 0.4, { css: { "letter-spacing":'5px'}, ease:Expo.easeOut  });
 
-            $(".work1").css({'opacity':"1"});
-            $(".work3").css({'opacity':"1"});
+                TweenMax.to($(".work1"), 0.4, { css: { "letter-spacing":'0px'}, ease:Expo.easeOut  });
+                TweenMax.to($(".work3"), 0.4, { css: { "letter-spacing":'0px'}, ease:Expo.easeOut  });
         });
 
+        texto2.click(function(){
+            $(".citroen").animate({'pointer-events':'none','opacity':1},200);
+            $('body').css({'overflowY':'auto'});
+            flag = false;
+        });
 
+        texto2.mouseleave(function () {
+                if (flag) {
+
+                    $(".citroen").animate({'opacity':0},200);
+
+
+                    
+                }
+
+                TweenMax.to($(".work1"), 0.4, { css: { "letter-spacing":'0px'}, ease:Expo.easeOut  });
+
+                TweenMax.to($(".work2"), 0.4, { css: { "letter-spacing":'0px'}, ease:Expo.easeOut  });
+                TweenMax.to($(".work3"), 0.4, { css: { "letter-spacing":'0px'}, ease:Expo.easeOut  });
+           
+        });
 
         texto3 = $("#work .panel3>a>p");
 
         texto3.hover(function(){
-            $(".origins").animate({'opacity':1},"slow");
-            $(".big-text ul>li:nth-child(3)>a>p").css({'opacity':"1"});
+            $(".byma").animate({'opacity':0},200);
+            $(".citroen").animate({'opacity':0},200);
+            $(".origins").animate({'opacity':1},200);
 
-            $(".big-text ul>li:nth-child(1)>a>p").css({'opacity':"0"});
-            $(".big-text ul>li:nth-child(2)>a>p").css({'opacity':"0"});
-        },function(){
+            TweenMax.to($(".work3"), 0.4, { css: { "letter-spacing":'5px'}, ease:Expo.easeOut  });
 
-            $(".origins").animate({'opacity':0},"slow");
-            $(".big-text ul>li:nth-child(3)>a>p").css({'opacity':"1"});
+                TweenMax.to($(".work2"), 0.4, { css: { "letter-spacing":'0px'}, ease:Expo.easeOut  });
+                TweenMax.to($(".work1"), 0.4, { css: { "letter-spacing":'0px'}, ease:Expo.easeOut  });
 
-            $(".big-text ul>li:nth-child(1)>a>p").css({'opacity':"1"});
-            $(".big-text ul>li:nth-child(2)>a>p").css({'opacity':"1"});
+        });
+
+        // texto3.click(function(){
+        //     $(".origins").animate({'pointer-events':'none','opacity':1},200);
+        //     $('body').css({'overflowY':'auto'});
+        //     flag = false;
+        // });
+
+        texto3.mouseleave(function () {
+                if (flag) {
+
+                    $(".origins").animate({'opacity':0},200);
+                    
+                }
+
+                TweenMax.to($(".work1"), 0.4, { css: { "letter-spacing":'0px'}, ease:Expo.easeOut  });
+
+                TweenMax.to($(".work2"), 0.4, { css: { "letter-spacing":'0px'}, ease:Expo.easeOut  });
+                TweenMax.to($(".work3"), 0.4, { css: { "letter-spacing":'0px'}, ease:Expo.easeOut  });
+           
         });
 
     }
@@ -348,15 +399,28 @@ if ($(window).width() <= 1025 || $(window).width() >= 1366) {
     function animateAbout(){
 
         content = $(".big-text .content");
+        github = $("#about .big-text .redes>a>.github");
+        linkedin = $("#about .big-text .redes>a>.linkedin");
+        instagram = $("#about .big-text .redes>a>.instagram");
 
-        // content.animate({"opacity":1},2500);
+        var tl = new TimelineLite();
 
-        TweenLite.set(content, {  opacity: 0, y:"+=10%" });
+        tl.set(content, {  opacity: 0, y:"+=10%" });
+
+        tl.set(instagram, {  opacity: 0, x:"-=200%" });
+        tl.set(github, {  opacity: 0, x:"-=100%" });
+        tl.set(linkedin, {  opacity: 0 });
 
 
-        TweenLite.to(content, 2.6, {
-            y:"-=10%",opacity:1, ease: Power4.easeInOut
+        tl.to(content, 2.6, {
+            y:"-=10%",opacity:1, ease: Power4.easeInOut, onComplete: function(){
+
+            }
         });
+
+                    tl.to(linkedin, 0.8, {  opacity:1},"-=1");
+                    tl.to(github, 1.2, {  opacity: 1, x:"+=100%" },"-=1.2");
+                    tl.to(instagram, 1.5, {  opacity: 1, x:"+=200%" },"-=1.2");
 
     }
 
@@ -405,9 +469,21 @@ if ($(window).width() <= 1025 || $(window).width() >= 1366) {
     }
 
     function startMarquee(){
-        $('.marquee')
+       
+       $('.marquee1').marquee({
+           //duration in milliseconds of the marquee
+           duration: 15000,
+           //gap in pixels between the tickers
+           gap: 0,
+           //time in milliseconds before the marquee will start animating
+           delayBeforeStart: 0,
+           //'left' or 'right'
+           direction: 'right',
+           //true or false - should the marquee be duplicated to show an effect of continues flow
+           duplicated: true
+       });
 
-        .marquee({
+        $('.marquee').marquee({
             //duration in milliseconds of the marquee
             duration: 15000,
             //gap in pixels between the tickers
@@ -420,23 +496,13 @@ if ($(window).width() <= 1025 || $(window).width() >= 1366) {
             duplicated: true
         });
 
-        $('.marquee1').marquee({
-            //duration in milliseconds of the marquee
-            duration: 15000,
-            //gap in pixels between the tickers
-            gap: 0,
-            //time in milliseconds before the marquee will start animating
-            delayBeforeStart: 0,
-            //'left' or 'right'
-            direction: 'right',
-            //true or false - should the marquee be duplicated to show an effect of continues flow
-            duplicated: true
-        });
+
     }
 
     function startHoverEffect(){
 
-        $(".big-text .imagenes").hover(function(){
+        $('.imagenes-home').empty();
+        $(".big-text .imagenes-home").hover(function(){
 
             $(this).css({ opacity:1 });
         },function(){
@@ -444,9 +510,9 @@ if ($(window).width() <= 1025 || $(window).width() >= 1366) {
             $(this).css({ opacity:0 });
 
         });
-
+        
         var myAnimation = new hoverEffect({
-            parent: document.querySelector('.imagenes'),
+            parent: document.querySelector('.imagenes-home'),
             intensity: 0.3,
             image1: 'img/Sandro_retrato.jpg',
             image2: 'img/Sandro_retrato.jpg',
@@ -456,6 +522,18 @@ if ($(window).width() <= 1025 || $(window).width() >= 1366) {
             speedOut: 5
 
         });
+
+    }
+
+    function hoverHoyVideo(){
+
+        $('.hoyagency').hover(function(){
+
+            $('.video__hoy').css({'opacity':1});
+
+        }, function(){
+            $('.video__hoy').css({'opacity':0});
+        })
     }
 
     $(window).load(function () {
@@ -471,18 +549,68 @@ if ($(window).width() <= 1025 || $(window).width() >= 1366) {
 
     $(document).ready(function () {
 
-        animateWork();
-        animateIndex();
-        animateAbout();
-        activeParallax();
-        hoverBigText();
-        hoverWork();
-        hoverHead();
-
-        startMarquee();
-        generatePhrases();
+        var body = document.getElementById('barba-wrapper');
+        body.style.setProperty( 'overflow-y', 'hidden' );
 
 
-        startHoverEffect();
+        $('.imagenes>img').css({'opacity':0});
 
+        $('.imagenes-home').css({'zIndex':0});
+        if (page_ == 'index.html' || page_ == '') {
+
+            $('.imagenes-home').css({'zIndex':99999});
+            animateIndex();
+            startMarquee();
+            generatePhrases();
+
+
+            startHoverEffect();
+
+
+        }
+
+        if (page_ == 'work.html') {
+            animateWork();
+            hoverWork();
+
+        }
+
+        if (page_ == 'about.html') {
+
+            hoverHoyVideo();
+            
+        }
+
+
+
+        if (page_ == 'detalle.html') {
+
+            var body = document.getElementById('barba-wrapper');
+            body.style.setProperty( 'overflow-y', 'auto' );
+
+            $('.byma').css({'opacity':1});
+
+
+
+        }else{
+
+            
+            animateAbout();
+            activeParallax();
+            hoverBigText();
+            
+            hoverHead();
+
+           
+
+        }
+
+
+        if (page_ == 'citroen-centenario.html') {
+
+            var body = document.getElementById('barba-wrapper');
+            body.style.setProperty( 'overflow-y', 'auto' );
+
+            $('.citroen').css({'opacity':1});
+        }
     });
